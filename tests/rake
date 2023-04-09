@@ -1,0 +1,8 @@
+CC=gcc
+FLAGS=-Wall -Wpedantic -ggdb -std=c99
+DEFINES=
+INCLUDES=
+FILES=main.c
+LIBS=
+EXEC=main
+
