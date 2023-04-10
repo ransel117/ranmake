@@ -7,7 +7,7 @@ CINCLUDES=""
 CFILES="main.c"
 CLIBS=""
 
-EXEC="rake"
+EXEC="ranmake"
 
 echo "--------COMPILING--------"
 echo "$CC $CFLAGS $CDEFINES $CINCLUDES $CFILES -o $EXEC $CLIBS"
