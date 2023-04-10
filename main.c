@@ -1,22 +1,22 @@
-#define RAKE_IMPLEMENTATION
-#include "rake.h"
+#define RANMAKE_IMPLEMENTATION
+#include "ranmake.h"
 
 int32_t main(int32_t argc, char *argv[]) {
     if (argc > 3) {
-        RAKE_ERR_RET(RAKE_ERR, "too many arguments");
+        RANMAKE_ERR_RET(RANMAKE_ERR, "too many arguments");
     } else if (argc > 1) {
-        if (rake_str_eq(argv[1], RAKE_VER_ARG1) || rake_str_eq(argv[1], RAKE_VER_ARG2)) {
-            return rake_print_ver();
-        } else if (rake_str_eq(argv[1], RAKE_HELP_ARG1) || rake_str_eq(argv[1], RAKE_HELP_ARG2)) {
-            return rake_print_help();
-        } else if (rake_str_eq(argv[1], RAKE_F_ARG1) || rake_str_eq(argv[1], RAKE_F_ARG2)) {
-            return rake_main(argv[2]);
+        if (ranmake_str_eq(argv[1], RANMAKE_VER_ARG1) || ranmake_str_eq(argv[1], RANMAKE_VER_ARG2)) {
+            return ranmake_print_ver();
+        } else if (ranmake_str_eq(argv[1], RANMAKE_HELP_ARG1) || ranmake_str_eq(argv[1], RANMAKE_HELP_ARG2)) {
+            return ranmake_print_help();
+        } else if (ranmake_str_eq(argv[1], RANMAKE_F_ARG1) || ranmake_str_eq(argv[1], RANMAKE_F_ARG2)) {
+            return ranmake_main(argv[2]);
         }
     }
 
-    #if RAKE_DEBUG
-    rake_print_args(argv, argc);
-    #endif /* RAKE_DEBUG */
+    #if RANMAKE_DEBUG
+    ranmake_print_args(argv, argc);
+    #endif /* RANMAKE_DEBUG */
 
-    return rake_main("");
+    return ranmake_main("");
 }
