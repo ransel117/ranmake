@@ -88,7 +88,9 @@ int32_t rake_print_ver(void) {
 }
 
 int32_t rake_print_help(void) {
-    return printf("help message\n");
+    return printf("-v, --version    prints the version of the software\n"
+                  "-h, --help       prints this help message\n"
+                  "-f, --file       uses a specified file instead of the default rake or __rake\n");
 }
 
 bool rake_str_eq(const char *a, const char *b) {
